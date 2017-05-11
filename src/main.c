@@ -1,8 +1,8 @@
 #include "verbs.h"
+#include <stdio.h>
 
 int main()
 {
-	record A;
 	printf("IrregularVerbs\n");
 	ReadDictionary();
 	return 0;
