@@ -4,6 +4,6 @@
 int main()
 {
 	printf("IrregularVerbs\n");
-	ReadDictionary();
+	(ReadDictionary()?printf("Done!\n"):printf("Error!\n"));
 	return 0;
 }
