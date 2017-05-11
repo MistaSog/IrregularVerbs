@@ -16,7 +16,7 @@ verbs: main.o verbs.o
 	$(CC) build/$(SRC_PATH)/main.o build/$(SRC_PATH)/verbs.o -o bin/IrVerbs
 	./bin/IrVerbs
 
-verbs_test: main_test.o deposit_test.o
+verbs_test: main_test.o verbs_test.o
 	$(CC) $(INCLUDES) build/$(TEST_PATH)/main.o build/$(TEST_PATH)/verbs_test.o -o bin/IrVerbs-test
 	./bin/IrVerbs-test
 
