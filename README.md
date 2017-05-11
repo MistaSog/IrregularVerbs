@@ -1,0 +1,1 @@
+Master status: [![Build Status](https://travis-ci.org/MistaSog/IrregularVerbs.svg?branch=master)](https://travis-ci.org/MistaSog/IrregularVerbs)
