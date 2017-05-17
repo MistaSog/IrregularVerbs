@@ -7,5 +7,5 @@ typedef struct {
 	char past_participle[32];
 } Record;
 
-int ReadDictionary(char fname[32], Record*);
+int ReadDictionary(char fname[32], Record *);
 #endif

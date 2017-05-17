@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int ReadDictionary(char fname[],Record* A)
+int ReadDictionary(char fname[],Record *A)
 {
 	FILE *fdict;
 	if(!(fdict = fopen(fname, "r"))) return 0;
