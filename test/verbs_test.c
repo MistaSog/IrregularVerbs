@@ -17,7 +17,7 @@ CTEST(input_suite, error_test)
 	ASSERT_EQUAL(expected, result);
 }
 
-CTEST(otput_suite, correct_test)
+CTEST(output_suite, correct_test)
 {
 	Record A[VERBS_NUMBER];
 	ReadDictionary("src/Dictionary", A);
@@ -26,7 +26,7 @@ CTEST(otput_suite, correct_test)
 	ASSERT_EQUAL(expected, result);
 }
 
-CTEST(otput_suite, error_test)
+CTEST(output_suite, error_test)
 {
 	Record B[1]={{"NULL", "NULL", "NULL"}};
 	const int result = PrintDictionary(B);
