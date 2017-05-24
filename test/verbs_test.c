@@ -1,7 +1,7 @@
 #include "verbs.c"
 #include "ctest.h"
 
-CTEST(verbs_suite, correct_test)
+CTEST(input_suite, correct_test)
 {
 	Record A[VERBS_NUMBER];
 	const int result = ReadDictionary("src/Dictionary", A);
@@ -9,10 +9,27 @@ CTEST(verbs_suite, correct_test)
 	ASSERT_EQUAL(expected, result);
 }
 
-CTEST(verbs_suite, error_test)
+CTEST(input_suite, error_test)
 {
 	Record A[VERBS_NUMBER];
 	const int result = ReadDictionary("src/dog", A);
+	const int expected = 0;
+	ASSERT_EQUAL(expected, result);
+}
+
+CTEST(output_suite, correct_test)
+{
+	Record A[VERBS_NUMBER];
+	ReadDictionary("src/Dictionary", A);
+	const int result = PrintDictionary(A);
+	const int expected = 1;
+	ASSERT_EQUAL(expected, result);
+}
+
+CTEST(output_suite, error_test)
+{
+	Record B[1]={{"NULL", "NULL", "NULL"}};
+	const int result = PrintDictionary(B);
 	const int expected = 0;
 	ASSERT_EQUAL(expected, result);
 }

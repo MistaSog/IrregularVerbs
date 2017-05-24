@@ -1,6 +1,6 @@
 #ifndef VERBS
 #define VERBS
-#define VERBS_NUMBER 374
+#define VERBS_NUMBER 373
 typedef struct {
 	char inf[32];
 	char past_simple[32];
@@ -8,4 +8,5 @@ typedef struct {
 } Record;
 
 int ReadDictionary(char fname[32], Record *);
+int PrintDictionary(Record *);
 #endif
