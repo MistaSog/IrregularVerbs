@@ -1,10 +1,11 @@
 #ifndef VERBS
 #define VERBS
+#define VERBS_NUMBER 374
 typedef struct {
-	char inf[16];
-	char past_simple[16];
-	char past_participle[16];
+	char inf[32];
+	char past_simple[32];
+	char past_participle[32];
 } Record;
 
-int ReadDictionary();
+int ReadDictionary(char fname[32], Record *);
 #endif
