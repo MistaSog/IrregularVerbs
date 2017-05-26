@@ -9,4 +9,5 @@ typedef struct {
 
 int ReadDictionary(char fname[32], Record *);
 int PrintDictionary(Record *);
+int PrintTask(Record *);
 #endif
