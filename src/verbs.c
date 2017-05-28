@@ -60,7 +60,6 @@ void PrintTask(Record *A)
 				correct++;
 			}
 			else {
-				if (strstr(A[word].past_participle, task))
 				printf("| Wrong answer! correct form is: %-30s|\n",
 					A[word].past_participle);
 			}
