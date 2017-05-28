@@ -17,12 +17,9 @@ int ReadDictionary(char fname[],Record *A)
 	return 1;
 }
 
-int PrintDictionary(Record *A)
+void PrintDictionary(Record *A)
 {	
 	int i = 0;
-	if (strcmp(A[0].inf,"NULL")==0) {
-		return 0;
-	}
 	printf("|====================+====================+====================|\n");
 	printf("|     Infinitive     |     Past Simple    |   Past Participle  |\n");
 	printf("|====================+====================+====================|\n");
@@ -31,7 +28,6 @@ int PrintDictionary(Record *A)
 			A[i].inf, A[i].past_simple, A[i].past_participle);
 	}
 	printf("|====================+====================+====================|\n");
-	return 1;
 }
 
 void PrintTask(Record *A)

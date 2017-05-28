@@ -9,9 +9,10 @@ typedef struct {
 } Record;
 
 void CleanBuff(void);
+
 int ReadDictionary(char fname[32], Record *);
-int PrintDictionary(Record *);
-void PrintTask(Record *);
 int TaskMark(int, int);
+void PrintDictionary(Record *);
+void PrintTask(Record *);
 void PrintMark(int, int, int);
 #endif
