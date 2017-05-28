@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int ReadDictionary(char fname[],Record *A)
+int read_dictionary(char fname[],Record *A)
 {
 	FILE *fdict;
 	if (!(fdict = fopen(fname, "r"))) { 
@@ -17,20 +17,24 @@ int ReadDictionary(char fname[],Record *A)
 	return 1;
 }
 
-void PrintDictionary(Record *A)
+void print_dictionary(Record *A)
 {	
 	int i = 0;
-	printf("|====================+====================+====================|\n");
-	printf("|     Infinitive     |     Past Simple    |   Past Participle  |\n");
-	printf("|====================+====================+====================|\n");
+	printf(
+		"|====================+====================+====================|\n");
+	printf(
+		"|     Infinitive     |     Past Simple    |   Past Participle  |\n");
+	printf(
+		"|====================+====================+====================|\n");
 	for (i = 0; i < VERBS_NUMBER; i++) {
 		printf("| %18s | %18s | %18s |\n", 
 			A[i].inf, A[i].past_simple, A[i].past_participle);
 	}
-	printf("|====================+====================+====================|\n");
+	printf(
+		"|====================+====================+====================|\n");
 }
 
-void PrintTask(Record *A)
+void print_task(Record *A)
 {
 	char task[32];
 	int all;
@@ -39,12 +43,18 @@ void PrintTask(Record *A)
 	int mark = 0;
 	int v, word;
 	all = TASK_NUMBER;
-	printf("|==============================================================|\n");
-	printf("|          Fill in the blanks with the correct form            |\n");
-	printf("|   If it has several forms, list them via \"/\" without spaces  |\n");
-	printf("|               For example \"example1/example2\"                |\n");
-	printf("|     Infinitive     |     Past Simple    |   Past Participle  |\n");
-	printf("|==============================================================|\n");
+	printf(
+		"|==============================================================|\n");
+	printf(
+		"|          Fill in the blanks with the correct form            |\n");
+	printf(
+		"|   If it has several forms, list them via \"/\" without spaces  |\n");
+	printf(
+		"|               For example \"example1/example2\"                |\n");
+	printf(
+		"|     Infinitive     |     Past Simple    |   Past Participle  |\n");
+	printf(
+		"|==============================================================|\n");
 	for (i = 0; i < all; i++) {
 		v = (rand() % all) % 2;
 		word = rand() % all;
@@ -54,7 +64,7 @@ void PrintTask(Record *A)
 				A[word].inf, A[word].past_simple);
 			printf("|>");
 			scanf("%32s", task);
-			CleanBuff();
+			clean_buff();
 			if (strcmp(A[word].past_participle, task) == 0) {
 				printf("| Correct answer!\n");
 				correct++;
@@ -69,7 +79,7 @@ void PrintTask(Record *A)
 				A[word].inf, A[word].past_participle);
 			printf("|>");
 			scanf("%32s", task);
-			CleanBuff();
+			clean_buff();
 			if (strcmp(A[word].past_simple, task) == 0) {
 				printf("| Correct answer!\n");
 				correct++;
@@ -82,11 +92,11 @@ void PrintTask(Record *A)
 			break;
 		}
 	}
-	mark = TaskMark(all, correct);
-	PrintMark(all, correct, mark);
+	mark = task_mark(all, correct);
+	print_mark(all, correct, mark);
 }
 
-int TaskMark(int all, int correct)
+int task_mark(int all, int correct)
 {
 	int mark = 0;
 	double calc = 0;
@@ -106,15 +116,18 @@ int TaskMark(int all, int correct)
 	return mark;
 }
 
-void PrintMark(int all, int correct, int mark)
+void print_mark(int all, int correct, int mark)
 {
-	printf("|==============================================================|\n");
-	printf("|               Correct: %3d/%-3d      Mark: %1d                  |\n",
+	printf(
+		"|==============================================================|\n");
+	printf(
+		"|               Correct: %3d/%-3d      Mark: %1d                  |\n",
 			correct, all, mark);
-	printf("|==============================================================|\n");
+	printf(
+		"|==============================================================|\n");
 }
 
-void CleanBuff(void)
+void clean_buff(void)
 {
     int c;
     do {
