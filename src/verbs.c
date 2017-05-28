@@ -56,8 +56,8 @@ void print_task(Record *A)
 	printf(
 		"|==============================================================|\n");
 	for (i = 0; i < all; i++) {
-		v = (rand() % all) % 2;
-		word = rand() % all;
+		v = (rand() % VERBS_NUMBER) % 2;
+		word = rand() % VERBS_NUMBER;
 		switch (v) {
 		case 0:
 			printf("| %18s | %18s |                    |\n", 
