@@ -4,10 +4,14 @@
 int main()
 {
 	Record A[VERBS_NUMBER];
-	printf("IrregularVerbs\n");
-	read_dictionary(DICTIONARY_PATH, A) ?
-		printf("Done!\n") : printf("Error!\n");
-	print_dictionary(A);
-	print_task(A);
+	printf("Reading the dictionary file\n");
+	if (read_dictionary(DICTIONARY_PATH, A) == 0) {
+		printf("Error!\n");
+		return 1;
+	}
+	else {
+		printf("Done!\n\n");
+	}
+	menu(A);
 	return 0;
 }

@@ -134,3 +134,35 @@ void clean_buff(void)
         c = getchar();
     } while (c != '\n' && c != EOF);
 }
+
+void menu(Record *A)
+{
+	char c;
+	int ext = 0;
+	while (!ext) {
+		printf(
+			"|==============================================================|\n");
+		printf(
+			"| Enter \"1\" to print list of irregular verbs                   |\n");
+		printf(
+			"| Enter \"2\" to test your knowledge of irregular verbs          |\n");
+		printf(
+			"| Enter \"3\" to exit                                            |\n");
+		printf(
+			"|==============================================================|\n");
+		c = getchar();
+		clean_buff();
+		switch (c) {
+		case '1':
+			print_dictionary(A);
+			break;
+		case '2':
+			print_task(A);
+			break;
+		case '3':
+			ext = 1;
+		default :
+			break;
+		}
+	}
+}
