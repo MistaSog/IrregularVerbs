@@ -7,6 +7,6 @@ int main()
 	printf("IrregularVerbs\n");
 	ReadDictionary("src/Dictionary", A) ? printf("Done!\n") : printf("Error!\n");
 	PrintDictionary(A) ? printf("Done!\n") : printf("Error!\n");
-	PrintTask(A) ? printf("Done!\n") : printf("Error!\n");
+	PrintTask(A);
 	return 0;
 }

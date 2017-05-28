@@ -34,31 +34,37 @@ int PrintDictionary(Record *A)
 	return 1;
 }
 
-int PrintTask(Record *A)
+void PrintTask(Record *A)
 {
 	char task[32];
+	int all;
 	int i = 0;
 	int correct = 0;
 	int mark = 0;
 	int v, word;
+	all = TASK_NUMBER;
 	printf("|==============================================================|\n");
 	printf("|          Fill in the blanks with the correct form            |\n");
+	printf("|   If it has several forms, list them via \"/\" without spaces  |\n");
+	printf("|               For example \"example1/example2\"                |\n");
 	printf("|     Infinitive     |     Past Simple    |   Past Participle  |\n");
 	printf("|==============================================================|\n");
-	for (i = 0; i < 10; i++) {
-		v = (rand() % VERBS_NUMBER) % 2;
-		word = rand() % VERBS_NUMBER;
+	for (i = 0; i < all; i++) {
+		v = (rand() % all) % 2;
+		word = rand() % all;
 		switch (v) {
 		case 0:
 			printf("| %18s | %18s |                    |\n", 
 				A[word].inf, A[word].past_simple);
 			printf("|>");
-			scanf("%s", task);
-			if ( strcmp(A[word].past_participle, task) == 0) {
+			scanf("%32s", task);
+			CleanBuff();
+			if (strcmp(A[word].past_participle, task) == 0) {
 				printf("| Correct answer!\n");
 				correct++;
 			}
 			else {
+				if (strstr(A[word].past_participle, task))
 				printf("| Wrong answer! correct form is: %-30s|\n",
 					A[word].past_participle);
 			}
@@ -67,8 +73,9 @@ int PrintTask(Record *A)
 			printf("| %18s |                    | %18s |\n", 
 				A[word].inf, A[word].past_participle);
 			printf("|>");
-			scanf("%s", task);
-			if ( strcmp(A[word].past_simple, task) == 0) {
+			scanf("%32s", task);
+			CleanBuff();
+			if (strcmp(A[word].past_simple, task) == 0) {
 				printf("| Correct answer!\n");
 				correct++;
 			}
@@ -76,38 +83,46 @@ int PrintTask(Record *A)
 				printf("| Wrong answer! correct form is: %-30s|\n",
 					A[word].past_simple);
 			}
-			break;
 		default :
-			break;
-		}
-		switch (correct) {
-		case 0:
-		case 1:
-		case 2:
-		case 3:
-			mark = 2;
-			break;
-		case 4:
-		case 5:
-		case 6:
-			mark = 3;
-			break;
-		case 7:
-		case 8:
-		case 9:
-			mark = 4;
-			break;
-		case 10:
-			mark = 5;
-			break;
-		default :
-			mark = 2;
 			break;
 		}
 	}
+	mark = TaskMark(all, correct);
+	PrintMark(all, correct, mark);
+}
+
+int TaskMark(int all, int correct)
+{
+	int mark = 0;
+	float calc = 0.0;
+	calc = correct / (float)all;
+	if (calc > 0 && calc <= 0.35) {
+		mark = 2;
+	}
+	if (calc > 0.35 && calc <= 0.60) {
+		mark = 3;
+	}
+	if (calc > 0.60 && calc <= 0.85) {
+		mark = 4;
+	}
+	if (calc > 0.85 && calc <= 1.0) {
+		mark = 5;
+	}
+	return mark;
+}
+
+void PrintMark(int all, int correct, int mark)
+{
 	printf("|==============================================================|\n");
-	printf("|               Correct: %2d/10      Mark: %d                    |\n",
-			correct, mark);
+	printf("|               Correct: %3d/%-3d      Mark: %1d                  |\n",
+			correct, all, mark);
 	printf("|==============================================================|\n");
-	return 1;
+}
+
+void CleanBuff(void)
+{
+    int c;
+    do {
+        c = getchar();
+    } while (c != '\n' && c != EOF);
 }
