@@ -94,8 +94,8 @@ void PrintTask(Record *A)
 int TaskMark(int all, int correct)
 {
 	int mark = 0;
-	float calc = 0.0;
-	calc = correct / (float)all;
+	double calc = 0;
+	calc = correct / (double)all;
 	if (calc > 0 && calc <= 0.35) {
 		mark = 2;
 	}
