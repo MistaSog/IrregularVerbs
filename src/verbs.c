@@ -56,8 +56,8 @@ void print_task(Record *A)
 	printf(
 		"|==============================================================|\n");
 	for (i = 0; i < all; i++) {
-		v = (rand() % all) % 2;
-		word = rand() % all;
+		v = (rand() % VERBS_NUMBER) % 2;
+		word = rand() % VERBS_NUMBER;
 		switch (v) {
 		case 0:
 			printf("| %18s | %18s |                    |\n", 
@@ -133,4 +133,36 @@ void clean_buff(void)
     do {
         c = getchar();
     } while (c != '\n' && c != EOF);
+}
+
+void menu(Record *A)
+{
+	char c;
+	int ext = 0;
+	while (!ext) {
+		printf(
+			"|==============================================================|\n");
+		printf(
+			"| Enter \"1\" to print list of irregular verbs                   |\n");
+		printf(
+			"| Enter \"2\" to test your knowledge of irregular verbs          |\n");
+		printf(
+			"| Enter \"3\" to exit                                            |\n");
+		printf(
+			"|==============================================================|\n");
+		c = getchar();
+		clean_buff();
+		switch (c) {
+		case '1':
+			print_dictionary(A);
+			break;
+		case '2':
+			print_task(A);
+			break;
+		case '3':
+			ext = 1;
+		default :
+			break;
+		}
+	}
 }
