@@ -17,24 +17,7 @@ CTEST(input_suite, error_test)
 	ASSERT_EQUAL(expected, result);
 }
 
-CTEST(output_suite, correct_test)
-{
-	Record A[VERBS_NUMBER];
-	ReadDictionary("src/Dictionary", A);
-	const int result = PrintDictionary(A);
-	const int expected = 1;
-	ASSERT_EQUAL(expected, result);
-}
-
-CTEST(output_suite, error_test)
-{
-	Record B[1]={{"NULL", "NULL", "NULL"}};
-	const int result = PrintDictionary(B);
-	const int expected = 0;
-	ASSERT_EQUAL(expected, result);
-}
-
-const int ALL=100;
+const int ALL = 100;
 
 CTEST(mark_suite, below_zero_test)
 {
