@@ -5,8 +5,8 @@ int main()
 {
 	Record A[VERBS_NUMBER];
 	printf("IrregularVerbs\n");
-	ReadDictionary("src/Dictionary", A) ? printf("Done!\n") : printf("Error!\n");
-	PrintDictionary(A);
-	PrintTask(A);
+	read_dictionary(DICTIONARY_PATH, A) ? printf("Done!\n") : printf("Error!\n");
+	print_dictionary(A);
+	print_task(A);
 	return 0;
 }
