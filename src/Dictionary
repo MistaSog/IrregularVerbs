@@ -1,6 +1,5 @@
 arise arose arisen
 awake awakened/awoke awakened/awoken
-backslide backslid backslidden/backslid
 be was/were been
 bear bore born/borne
 beat beat beaten/beat
@@ -17,8 +16,6 @@ blow blew blown
 break broke broken
 breed bred bred
 bring brought brought
-broadcast broadcast/broadcasted broadcast/broadcasted
-browbeat browbeat browbeaten/browbeat
 build built built
 burn burned/burnt burned/burnt
 burst burst burst
@@ -34,11 +31,8 @@ cost cost cost
 creep crept crept
 crossbreed crossbred crossbred
 cut cut cut
-daydream daydreamed/daydreamt daydreamed/daydreamt
 deal dealt dealt
 dig dug dug
-disprove disproved disproved/disproven
-dive(jump_head-first) dove/dived dived
 dive(scuba_diving) dived/dove dived
 do did done
 draw drew drawn
@@ -52,7 +46,6 @@ feed fed fed
 feel felt felt
 fight fought fought
 find found found
-fit(tailor,change_size) fitted/fit fitted/fit
 fit(be_right_size) fit/fitted fit/fitted
 flee fled fled
 fling flung flung
@@ -86,7 +79,6 @@ inbreed inbred inbred
 inlay inlaid inlaid
 input input/inputted input/inputted
 interbreed interbred interbred
-interweave interwove/interweaved interwoven/interweaved
 interwind interwound interwound
 jerry-build jerry-built jerry-built
 keep kept kept
@@ -102,7 +94,6 @@ leave left left
 lend lent lent
 let let let
 lie lay lain
-lie(not_tell_truth) lied lied
 light lit/lighted lit/lighted
 lip-read lip-read lip-read
 lose lost lost
@@ -115,11 +106,9 @@ misdo misdid misdone
 mishear misheard misheard
 mislay mislaid mislaid
 mislead misled misled
-mislearn mislearned/mislearnt mislearned/mislearnt
 misread misread misread
 misset misset misset
 misspeak misspoke misspoken
-misspell misspelled/misspelt misspelled/misspelt
 misspend misspent misspent
 mistake mistook mistaken
 misteach mistaught mistaught
@@ -137,7 +126,6 @@ outfight outfought outfought
 outfly outflew outflown
 outgrow outgrew outgrown
 outleap outleaped/outleapt outleaped/outleapt
-outlie(not_tell_truth) outlied outlied
 outride outrode outridden
 outrun outran outrun
 outsell outsold outsold
@@ -146,7 +134,6 @@ outshoot outshot outshot
 outsing outsang outsung
 outsit outsat outsat
 outsleep outslept outslept
-outsmell outsmelled/outsmelt outsmelled/outsmelt
 outspeak outspoke outspoken
 outspeed outsped outsped
 outspend outspent outspent
@@ -178,7 +165,6 @@ overshoot overshot overshot
 oversleep overslept overslept
 overspeak overspoke overspoken
 overspend overspent overspent
-overspill overspilled/overspilt overspilled/overspilt
 overtake overtook overtaken
 overthink overthought overthought
 overthrow overthrew overthrown
@@ -203,21 +189,18 @@ read read read
 reawake reawoke reawaken
 rebid rebid rebid
 rebind rebound rebound
-rebroadcast rebroadcast/rebroadcasted rebroadcast/rebroadcasted
 rebuild rebuilt rebuilt
 recast recast recast
 recut recut recut
 redeal redealt redealt
 redo redid redone
 redraw redrew redrawn
-refit(replace_parts) refit/refitted refit/refitted
 refit(retailor) refitted/refit refitted/refit
 regrind reground reground
 regrow regrew regrown
 rehang rehung rehung
 rehear reheard reheard
 reknit reknitted/reknit reknitted/reknit
-relay(for_example_tiles) relaid relaid
 relay(pass_along) relayed relayed
 relearn relearned/relearnt relearned/relearnt
 relight relit/relighted relit/relighted
@@ -235,7 +218,6 @@ retear retore retorn
 retell retold retold
 rethink rethought rethought
 retread retread retread
-retrofit retrofitted/retrofit retrofitted/retrofit
 rewake rewoke/rewaked rewaken/rewaked
 rewear rewore reworn
 reweave rewove/reweaved rewoven/reweaved
