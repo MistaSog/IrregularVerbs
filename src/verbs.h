@@ -1,6 +1,6 @@
 #ifndef VERBS
 #define VERBS
-#define VERBS_NUMBER 355
+#define VERBS_NUMBER 130
 #define TASK_NUMBER 5
 #define DICTIONARY_PATH "src/Dictionary"
 
