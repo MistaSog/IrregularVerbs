@@ -1,8 +1,11 @@
 #include "verbs.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main()
 {
+	srand(time(NULL));
 	Record A[VERBS_NUMBER];
 	printf("Reading the dictionary file\n");
 	if (read_dictionary(DICTIONARY_PATH, A) == 0) {
